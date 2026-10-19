@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #063d2b, #12834a);
+    color: #ffffff;
+}
+
+.caixa-principal {
+    width: 100%;
+    max-width: 700px;
+    padding: 35px;
+    text-align: center;
+    background: #ffffff;
+    color: #173b2b;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    margin-top: 0;
+    color: #087443;
+    font-size: clamp(25px, 5vw, 36px);
+}
+
+.introducao {
+    color: #555555;
+    line-height: 1.6;
+}
+
+button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #087443;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #055c34;
+    transform: translateY(-2px);
+}
+
+button:focus-visible {
+    outline: 3px solid #e9b949;
+    outline-offset: 3px;
+}
+
+.caixa-perguntas {
+    margin: 24px 0;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.caixa-alternativas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.caixa-alternativas button {
+    margin-top: 0;
+    background: #edf7f0;
+    color: #14532d;
+    border: 2px solid #c7e6d0;
+}
+
+.caixa-alternativas button:hover {
+    background: #d6efde;
+}
+
+.progresso {
+    color: #087443;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.caixa-resultado {
+    margin-top: 25px;
+    padding: 20px;
+    background: #edf7f0;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.titulo-resultado {
+    color: #087443;
+}
+
+.texto-resultado {
+    white-space: pre-line;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .caixa-principal {
+        padding: 22px;
+    }
+}
